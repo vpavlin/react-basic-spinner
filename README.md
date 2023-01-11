@@ -1,1 +1,1 @@
-# react-basic-spinner
+# React Pausable Spinner

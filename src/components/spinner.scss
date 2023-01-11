@@ -1,0 +1,61 @@
+:root {
+  --base-fill-color: #93bfec;
+}
+
+.spinner {
+  //animation: rotate 2s linear infinite;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin: 5px;
+  
+  & .path {
+    stroke: var(--base-fill-color);
+    stroke-linecap: round;
+    animation: dash 10s ease-in-out infinite;
+    stroke-dasharray: 126;
+    stroke-dashoffset: 0;
+  }
+
+  & .paused {
+    animation-play-state: paused;
+  }
+  
+}
+
+.fill {
+  fill: var(--base-fill-color);
+}
+
+.text {
+  font: bold 15px sans-serif;
+  color: var(--base-fill-color)
+}
+
+.paused {
+  animation-play-state: paused;
+}
+
+
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dashoffset: 126;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+
+}
+  
