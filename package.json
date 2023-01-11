@@ -1,30 +1,25 @@
 {
   "name": "react-pausable-spinner",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Simple pausable Spinner component for react executing a callback on each iteration",
   "author": "vaclav.pavlin@gmail.com",
   "keywords": ["react", "components", "ui"],
   "private": false,
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/index.ts",
+  "module": "dist/index.ts",
   "files": [ "dist", "README.md" ],
   "repository": {
       "type": "git",
       "url": "git+https://github.com/vpavlin/react-pausable-spinner.git"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
     "react": "^18.2.0",
     "typescript": "^4.9.4"
   },
-  "devDependencies": {
-    "@babel/cli": "^7.20.7",
-    "@babel/core": "^7.20.12",
-    "@babel/preset-env": "^7.20.2"
-  },
   "scripts": {
-    "build": "rm -rf dist && NODE_ENV=production babel src/ --out-dir dist --copy-files"
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc && cp package.json README.md ./dist"    
   }
 }
