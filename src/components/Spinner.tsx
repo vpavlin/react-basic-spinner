@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import "./spinner.scss"
 
 interface Props {
@@ -33,6 +33,10 @@ const Spinner = (props:Props) => {
     if (props.color) {
         document.documentElement.style.setProperty('--base-fill-color', props.color)
     }
+
+    useEffect(() => {
+        setPaused(props.isPaused)
+    }, [props.isPaused])
 
 
     return (

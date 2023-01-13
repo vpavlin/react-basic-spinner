@@ -9,5 +9,13 @@
     "module": "es6",
     "moduleResolution": "node"
   },
-  "include": ["src"]
+  "hooks": [
+    "copy-files"
+  ],
+  "include": [
+    "src",
+    "src/**/*.scss",
+    "./global.d.ts"
+  ],
+  "exclude": []
 }
